@@ -26,11 +26,10 @@
     "npm": "6.8.0"
   },
   "scripts": {
-    "ng": "ng",
     "start": "tsc --project server/tsconfig.json && concurrently \"ng serve\" \"nodemon server/server.js\"",
-    "build": "ng build",
+    "build": "npm run lint && ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "tslint --project",
     "e2e": "ng e2e",
     "heroku-postbuild": "tsc --project server/tsconfig.json && ng build"
   },
