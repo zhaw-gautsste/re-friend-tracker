@@ -27,9 +27,9 @@
   },
   "scripts": {
     "start": "tsc --project server/tsconfig.json && concurrently \"ng serve\" \"nodemon server/server.js\"",
-    "build": "npm run lint && ng build",
+    "build": "ng build",
     "test": "ng test",
-    "lint": "tslint --project",
+    "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "tsc --project server/tsconfig.json && ng build"
   },
@@ -41,7 +41,6 @@
     "pouchdb-core": "^7.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.13.4",
     "@angular/cli": "^7.3.5",
     "@angular/compiler-cli": "^7.2.8",
     "@types/jasmine": "2.5.38",
@@ -60,7 +59,6 @@
     "protractor": "^5.4.2",
     "ts-node": "2.0.0",
     "tslint": "5.11.0",
-    "tslint-angular": "1.1.2",
     "typescript": "^3.2.4"
   }
 }
